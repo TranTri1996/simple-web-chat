@@ -36,6 +36,13 @@
     .chatMessage:first-child {
       margin-top: auto;
     }
+
+    & .loadingIcon {
+      height: 20px;
+      width: 20px;
+      color: #3d4e8d;
+      margin: 4px auto;
+    }
   }
 
   & .chatFooter {
