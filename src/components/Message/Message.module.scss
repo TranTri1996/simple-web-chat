@@ -22,6 +22,7 @@
       font-weight: medium;
       padding: 0.625rem;
       position: relative;
+      font-size: 1.25rem;
 
       & .arrow {
         border-bottom: 0.5rem solid transparent;
@@ -51,7 +52,7 @@
   }
 }
 
-.wrapperLeft {
+.leftSide {
   align-items: flex-start;
 
   & .userName {
@@ -71,9 +72,13 @@
       }
     }
   }
+
+  & .avatar {
+    background-color: #3d4e8d;
+  }
 }
 
-.wrapperRight {
+.rightSide {
   align-items: flex-end;
 
   & .userName {
@@ -84,12 +89,16 @@
     justify-content: flex-end;
 
     & .message {
-      text-align: right;
+      text-align: left;
 
       & .arrow {
         border-left: 0.5rem solid #f1f1f1;
         right: -0.5rem;
       }
     }
+  }
+
+  & .avatar {
+    background-color: #4a5168;
   }
 }

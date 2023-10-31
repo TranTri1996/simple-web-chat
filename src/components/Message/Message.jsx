@@ -11,7 +11,7 @@ const Message = ({ className = "", userName, message, onLeftSide }) => {
       className={classNames(
         className,
         styles.wrapper,
-        onLeftSide ? styles.wrapperLeft : styles.wrapperRight
+        onLeftSide ? styles.leftSide : styles.rightSide
       )}
     >
       <p className={styles.userName}>{userName}</p>
