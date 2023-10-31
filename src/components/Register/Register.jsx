@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect, useContext } from "react";
+import React, { useRef, useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { WebChatContext } from "../../store";
 
@@ -84,9 +84,10 @@ const Register = () => {
           onChange={handleChangeUserName}
           onKeyDown={handleChangeUserName}
           className={styles.inputName}
+          data-testid="input-name"
         />
-        <button onClick={handleClickEnter} className={styles.enterButton}>
-          Enter
+        <button onClick={handleClickEnter} className={styles.enterButton} data-testid="register">
+          Register
         </button>
       </div>
       {<p className={styles.errorMessage}>{error}</p>}

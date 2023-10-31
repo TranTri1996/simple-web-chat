@@ -7,5 +7,6 @@ describe("Component Message", () => {
   it("should render successfully", () => {
     render(<Message message="Hello" userName="John" />);
     expect(screen.getByText("Hello")).toBeInTheDocument();
+    expect(screen.getByText("John")).toBeInTheDocument();
   });
 });
