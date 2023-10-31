@@ -1,13 +1,13 @@
+import { Outlet } from "react-router-dom";
+
 import styles from "./WebChat.module.scss";
 
-function WebChat() {
+const WebChat = () => {
   return (
     <div className={styles.app}>
-      <header className={styles.appHeader}>
-        <p>React app</p>
-      </header>
+      <Outlet />
     </div>
   );
-}
+};
 
 export default WebChat;
