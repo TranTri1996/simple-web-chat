@@ -6,14 +6,16 @@
 
   height: 100vh;
   margin-bottom: 12rem;
-  min-width: 31rem;
+  min-width: 32rem;
 
   & .registerForm {
     display: flex;
+    justify-content: center;
+    align-items: center;
 
     & .inputName {
-      height: 2rem;
-      min-width: 25rem;
+      height: 2.5rem;
+      min-width: 27rem;
       margin-right: 0.625rem;
       border: 1px solid #3d4e8d;
       border-radius: 0.25rem;
@@ -22,7 +24,7 @@
     }
 
     & .enterButton {
-      height: 2.25rem;
+      height: 2.75rem;
       width: 4.5rem;
       background-color: #3d4e8d;
       color: white;

@@ -1,3 +1,4 @@
+import React from "react";
 import classNames from "classnames";
 import PropTypes from "prop-types";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -5,7 +6,7 @@ import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "./Message.module.scss";
 
-const Message = ({ className = "", userName, message, onLeftSide }) => {
+const Message = ({ className = "", userName, message, onLeftSide = false }) => {
   return (
     <div
       className={classNames(
@@ -32,7 +33,7 @@ Message.propTypes = {
   className: PropTypes.string,
   userName: PropTypes.string.isRequired,
   message: PropTypes.string.isRequired,
-  onLeftSide: PropTypes.bool.isRequired,
+  onLeftSide: PropTypes.bool,
 };
 
 export default Message;
