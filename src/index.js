@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import { WebChat, Register, ChatWindow } from "./components";
+import { WebChat, Register, ChatWindow, PageNotFound } from "./components";
 import { WebChatProvider } from "./store";
 
 import "./index.css";
@@ -12,6 +12,7 @@ const router = createBrowserRouter([
   {
     path: "",
     element: <WebChat />,
+    errorElement: <PageNotFound />,
     children: [
       {
         path: "register/",

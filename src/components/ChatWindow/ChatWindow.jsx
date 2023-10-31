@@ -1,4 +1,5 @@
 import { useState, useContext, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 import { Message } from "../../components";
 import { useConversation } from "../../hooks";
@@ -7,10 +8,17 @@ import { WebChatContext } from "../../store";
 import styles from "./ChatWindow.module.scss";
 
 const ChatWindow = () => {
+  const navigate = useNavigate();
   const [inputMessage, setInputMessage] = useState("");
   const {
-    state: { userName },
+    state: { userName, isRegistered },
   } = useContext(WebChatContext);
+
+  useEffect(() => {
+    if (!isRegistered) {
+      navigate("register/");
+    }
+  }, [isRegistered, navigate]);
 
   const [conversation, updateConversation] = useConversation();
 
