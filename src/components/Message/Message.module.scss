@@ -1,7 +1,6 @@
-.wrapperLeft {
+.wrapper {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
   margin-bottom: 12px;
 
   & .userName {
@@ -13,106 +12,83 @@
 
   & .content {
     display: flex;
-    justify-content: flex-start;
-    flex-direction: row-reverse;
     align-items: center;
 
     & .message {
       display: flex;
-
       background-color: #f1f1f1;
       border-radius: 4px;
       color: #585858;
       font-weight: medium;
       padding: 10px;
       position: relative;
-      text-align: left;
 
       & .arrow {
         border-bottom: 8px solid transparent;
-        border-right: 8px solid #f1f1f1;
         border-top: 8px solid transparent;
         height: 0;
-        left: -7px;
         position: absolute;
         top: 13px;
         width: 0;
       }
     }
+  }
 
-    & .avatar {
-      align-items: center;
-      background-color: #3d4e8d;
-      border-radius: 50%;
-      display: flex;
-      height: 40px;
-      justify-content: center;
-      margin-left: 12.5px;
-      margin-right: 12.5px;
-      width: 40px;
+  & .avatar {
+    align-items: center;
+    background-color: #3d4e8d;
+    border-radius: 50%;
+    display: flex;
+    height: 40px;
+    justify-content: center;
+    margin-left: 12.5px;
+    margin-right: 12.5px;
+    width: 40px;
 
-      & .icon {
-        color: white;
+    & .icon {
+      color: white;
+    }
+  }
+}
+
+.wrapperLeft {
+  align-items: flex-start;
+
+  & .userName {
+    margin: 2px 0 2px 14px;
+  }
+
+  & .content {
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+
+    & .message {
+      text-align: left;
+
+      & .arrow {
+        border-right: 8px solid #f1f1f1;
+        left: -7px;
       }
     }
   }
 }
 
 .wrapperRight {
-  display: flex;
-  flex-direction: column;
   align-items: flex-end;
-  margin-bottom: 12px;
 
   & .userName {
     margin: 2px 14px 2px 0;
-    font-style: italic;
-    font-size: 13px;
-    color: #585858;
   }
 
   & .content {
-    display: flex;
     justify-content: flex-end;
-    flex-direction: row;
-    align-items: center;
 
     & .message {
-      display: flex;
-
-      background-color: #f1f1f1;
-      border-radius: 4px;
-      color: #585858;
-      font-weight: medium;
-      padding: 10px;
-      position: relative;
-      text-align: left;
+      text-align: right;
 
       & .arrow {
-        border-bottom: 8px solid transparent;
         border-left: 8px solid #f1f1f1;
-        border-top: 8px solid transparent;
-        height: 0;
-        position: absolute;
         right: -7px;
-        top: 13px;
-        width: 0;
-      }
-    }
-
-    & .avatar {
-      align-items: center;
-      background-color: #3d4e8d;
-      border-radius: 50%;
-      display: flex;
-      height: 40px;
-      justify-content: center;
-      margin-left: 12.5px;
-      margin-right: 12.5px;
-      width: 40px;
-
-      & .icon {
-        color: white;
       }
     }
   }

@@ -5,9 +5,15 @@ import { faUser } from "@fortawesome/free-solid-svg-icons";
 
 import styles from "./Message.module.scss";
 
-const Message = ({ userName, message, onLeftSide }) => {
+const Message = ({ className = "", userName, message, onLeftSide }) => {
   return (
-    <div className={onLeftSide ? styles.wrapperLeft : styles.wrapperRight}>
+    <div
+      className={classNames(
+        className,
+        styles.wrapper,
+        onLeftSide ? styles.wrapperLeft : styles.wrapperRight
+      )}
+    >
       <p className={styles.userName}>{userName}</p>
       <div className={styles.content}>
         <div className={classNames(styles.message)}>
@@ -23,6 +29,7 @@ const Message = ({ userName, message, onLeftSide }) => {
 };
 
 Message.propTypes = {
+  className: PropTypes.string,
   userName: PropTypes.string.isRequired,
   message: PropTypes.string.isRequired,
   onLeftSide: PropTypes.bool.isRequired,

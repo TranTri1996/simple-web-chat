@@ -25,6 +25,11 @@ const ChatWindow = () => {
   const typingRef = useRef(null);
 
   useEffect(() => {
+    const conversation = document.getElementById("conversation");
+    conversation.scrollTop = conversation.scrollHeight;
+  }, [conversation]);
+
+  useEffect(() => {
     typingRef.current.focus();
   }, [typingRef]);
 
@@ -49,11 +54,12 @@ const ChatWindow = () => {
   return (
     <div className={styles.wrapper}>
       <div className={styles.chatHeader}></div>
-      <div className={styles.chatBody}>
+      <div className={styles.chatBody} id="conversation">
         {conversation.map((item) => (
           <Message
             key={item.id}
             message={item.message}
+            className="chatMessage"
             userName={item.userName}
             onLeftSide={item.userName !== userName}
           />
