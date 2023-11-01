@@ -1,5 +1,6 @@
 import React, { useRef, useState, useEffect, useContext } from "react";
 import { useNavigate } from "react-router-dom";
+
 import { WebChatContext } from "../../store";
 
 import styles from "./Register.module.scss";
@@ -86,7 +87,11 @@ const Register = () => {
           className={styles.inputName}
           data-testid="input-name"
         />
-        <button onClick={handleClickEnter} className={styles.enterButton} data-testid="register">
+        <button
+          onClick={handleClickEnter}
+          className={styles.enterButton}
+          data-testid="register"
+        >
           Register
         </button>
       </div>

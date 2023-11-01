@@ -4,7 +4,6 @@ const useConversation = () => {
   const [conversation, setConversation] = useState(
     JSON.parse(localStorage.getItem("conversation")) || []
   );
-
   useEffect(() => {
     window.addEventListener("storage", (e) => {
       if (e.key === "conversation") {

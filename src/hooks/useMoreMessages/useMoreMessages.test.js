@@ -1,4 +1,5 @@
-import { renderHook, act } from "@testing-library/react-hooks";
+import { renderHook } from "@testing-library/react-hooks";
+
 import useMoreMessages from "./useMoreMessages";
 
 describe("useMoreMessages", () => {

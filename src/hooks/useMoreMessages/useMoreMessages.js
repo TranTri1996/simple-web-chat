@@ -1,4 +1,4 @@
-import { useState, useCallback, useMemo } from "react";
+import { useState, useCallback } from "react";
 import { v4 as uuidv4 } from "uuid";
 const fakeUserNames = ["John", "Smith", "David", "Paul"];
 
@@ -63,14 +63,11 @@ const useMoreMessages = (numFechMore) => {
     }, 2000);
   }, [numFechMore]);
 
-  return useMemo(
-    () => ({
-      fetchMessages,
-      messages,
-      loading,
-    }),
-    [fetchMessages, messages, loading]
-  );
+  return {
+    fetchMessages,
+    messages,
+    loading,
+  };
 };
 
 export default useMoreMessages;

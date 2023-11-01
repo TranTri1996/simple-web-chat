@@ -6,14 +6,14 @@ import React, {
   useCallback,
 } from "react";
 import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 import { Message } from "../../components";
 import { useConversation, useMoreMessages } from "../../hooks";
 import { WebChatContext } from "../../store";
 
 import styles from "./ChatWindow.module.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 const ChatWindow = () => {
   const navigate = useNavigate();
@@ -69,6 +69,7 @@ const ChatWindow = () => {
   }, [typingRef]);
 
   const handleSendMessage = () => {
+    if (inputMessage.trim() === "") return;
     updateConversation({
       id: `message-id-${Date.now()}`,
       userName,
@@ -116,7 +117,11 @@ const ChatWindow = () => {
           onKeyDown={handleInputChange}
           onChange={handleInputChange}
         />
-        <button className={styles.sendButton} onClick={handleSendMessage}>
+        <button
+          className={styles.sendButton}
+          onClick={handleSendMessage}
+          disabled={inputMessage.trim() === ""}
+        >
           Send
         </button>
       </div>
