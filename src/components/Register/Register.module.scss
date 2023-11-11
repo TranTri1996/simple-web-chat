@@ -1,0 +1,50 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  height: 100vh;
+  margin-bottom: 12rem;
+  min-width: 32rem;
+
+  & .registerForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & .inputName {
+      height: 2.5rem;
+      min-width: 27rem;
+      margin-right: 0.625rem;
+      border: 1px solid #3d4e8d;
+      border-radius: 0.25rem;
+      font-size: 1rem;
+      padding-left: 0.5rem;
+    }
+
+    & .enterButton {
+      height: 2.75rem;
+      width: 5rem;
+      background-color: #3d4e8d;
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+      border-radius: 0.25rem;
+      border: none;
+
+      &:hover {
+        cursor: pointer;
+      }
+      &:active {
+        background: #4e5e9b;
+      }
+    }
+  }
+
+  & .errorMessage {
+    height: 2rem;
+    color: #cb1313;
+    font-size: 1.25rem;
+  }
+}

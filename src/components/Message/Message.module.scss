@@ -1,0 +1,104 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 0.75rem;
+
+  & .userName {
+    font-style: italic;
+    font-size: 0.8125rem;
+    color: #585858;
+  }
+
+  & .content {
+    display: flex;
+    max-width: 90%;
+    align-items: flex-start;
+
+    & .message {
+      display: flex;
+      background-color: #f1f1f1;
+      border-radius: 0.25rem;
+      color: #585858;
+      font-weight: medium;
+      padding: 0.625rem;
+      position: relative;
+      font-size: 1.25rem;
+
+      & .arrow {
+        border-bottom: 0.5rem solid transparent;
+        border-top: 0.5rem solid transparent;
+        height: 0;
+        position: absolute;
+        top: 0.75rem;
+        width: 0;
+      }
+    }
+  }
+
+  & .avatar {
+    align-items: center;
+    background-color: #3d4e8d;
+    border-radius: 50%;
+    display: flex;
+    height: 2.5rem;
+    justify-content: center;
+    margin-left: 0.75rem;
+    margin-right: 0.75rem;
+    min-width: 2.5rem;
+
+    & .icon {
+      color: white;
+    }
+  }
+}
+
+.leftSide {
+  align-items: flex-start;
+
+  & .userName {
+    margin: 0.125rem 0 0.25rem 0.875rem;
+  }
+
+  & .content {
+    justify-content: flex-start;
+    flex-direction: row-reverse;
+
+    & .message {
+      text-align: left;
+
+      & .arrow {
+        border-right: 0.5rem solid #f1f1f1;
+        left: -0.5rem;
+      }
+    }
+  }
+
+  & .avatar {
+    background-color: #3d4e8d;
+  }
+}
+
+.rightSide {
+  align-items: flex-end;
+
+  & .userName {
+    margin: 0.125rem 0.875rem 0.25rem 0;
+  }
+
+  & .content {
+    justify-content: flex-end;
+
+    & .message {
+      text-align: left;
+
+      & .arrow {
+        border-left: 0.5rem solid #f1f1f1;
+        right: -0.5rem;
+      }
+    }
+  }
+
+  & .avatar {
+    background-color: #4a5168;
+  }
+}
